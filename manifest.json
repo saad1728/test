@@ -1,0 +1,15 @@
+{
+  "name": "زحمة الباصات • Bus Jam",
+  "short_name": "Bus Jam",
+  "description": "لعبة ألغاز: أخرج الباصات من الزحمة وأركب الركاب المطابقين!",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#7dd3fc",
+  "theme_color": "#38bdf8",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

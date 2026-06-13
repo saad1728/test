@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>زحمة الباصات • Bus Jam</title>
+<meta name="description" content="لعبة ألغاز ممتعة: أخرج الباصات من الزحمة وأركب الركاب المطابقين!">
+<meta name="theme-color" content="#38bdf8">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ───────── HOME ───────── -->
+  <div id="screen-home" class="screen">
+    <div class="home-top">
+      <div class="coin-pill">🪙 <span id="home-coins">0</span></div>
+      <button id="btn-settings" class="icon-btn">⚙️</button>
+    </div>
+    <div class="home-art">
+      <div class="sun"></div>
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+      <h1 id="home-title">زحمة الباصات</h1>
+      <div class="bus-art">🚌</div>
+      <div class="road"></div>
+    </div>
+    <div class="home-mid">
+      <button id="btn-gift" class="icon-btn big">🎁<span class="gift-tag">FREE</span></button>
+      <div class="how-box">
+        <h3 id="how-title">طريقة اللعب</h3>
+        <ul id="how-list"></ul>
+      </div>
+    </div>
+    <button id="btn-play" class="btn btn-play"></button>
+  </div>
+
+  <!-- ───────── GAME ───────── -->
+  <div id="screen-game" class="screen hidden">
+    <div class="hud">
+      <button id="btn-home" class="icon-btn">🏠</button>
+      <div class="hud-center">
+        <div id="hud-level" class="hud-level"></div>
+        <div class="hud-left-pill"><span id="hud-left">0</span> <span id="hud-left-label"></span></div>
+      </div>
+      <div class="hud-right">
+        <div class="coin-pill">🪙 <span id="hud-coins">0</span></div>
+        <button id="btn-settings-game" class="icon-btn">⚙️</button>
+      </div>
+    </div>
+
+    <div id="queue" class="queue" dir="ltr"></div>
+    <div id="slots" class="slots" dir="ltr"></div>
+
+    <div id="board-holder">
+      <canvas id="board"></canvas>
+    </div>
+
+    <div id="select-hint" class="select-hint hidden">
+      <span id="select-hint-text"></span>
+      <button id="cancel-select" class="btn btn-soft small"></button>
+    </div>
+
+    <div class="boosters">
+      <button id="b-refresh" class="booster"><span class="b-icon">🔄</span><span class="b-label"></span><span class="b-badge"></span></button>
+      <button id="b-clear" class="booster"><span class="b-icon">🧹</span><span class="b-label"></span><span class="b-badge"></span></button>
+      <button id="b-sort" class="booster"><span class="b-icon">🧲</span><span class="b-label"></span><span class="b-badge"></span></button>
+    </div>
+  </div>
+
+  <!-- ───────── shared ───────── -->
+  <div id="banner-ad"></div>
+  <div id="toast"></div>
+
+  <div id="modal" class="modal-wrap hidden">
+    <div class="modal">
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+      <div id="modal-buttons"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/levels.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ads.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
